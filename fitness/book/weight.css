@@ -1,0 +1,69 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('signin.avif'); /* Background image */
+    background-size: cover; /* Cover entire background */
+    background-position: center; /* Center the background image */
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    text-align: center; /* Centered text */
+    max-width: 400px; /* Max width of the container */
+    width: 100%; /* Full width within max-width */
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark grey color for text */
+}
+
+/* Label styling */
+label {
+    font-size: 18px; /* Font size for labels */
+    margin-bottom: 10px; /* Space below each label */
+    display: block; /* Block display for each label */
+    color: #333; /* Dark grey color for text */
+    text-align: left; /* Align text to the left */
+}
+
+/* Select input styling */
+select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 20px; /* Space below each input */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light grey border */
+    font-size: 16px; /* Font size for options */
+    background-color: #f9f9f9; /* Light background for select */
+}
+
+/* Button styling */
+.btn {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding inside the button */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block display */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    width: 100%; /* Full width within the container */
+}
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

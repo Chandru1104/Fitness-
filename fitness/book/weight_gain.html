@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Plan</title>
+    <link rel="stylesheet" href="weight.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Gain Plan</h1>
+        <form id="weightGainForm">
+            <label for="age">Age:</label>
+            <select id="age" name="age" required>
+                <option value="" disabled selected>Select your age range</option>
+                <option value="below_25">Below 25</option>
+                <option value="25_40">25-40</option>
+                <option value="above_40">Above 40</option>
+            </select>
+
+            <label for="fitness_level">Fitness Level:</label>
+            <select id="fitness_level" name="fitness_level" required>
+                <option value="" disabled selected>Select your fitness level</option>
+                <option value="normal_body_fit">Normal Body Fit</option>
+                <option value="sixpack">Sixpack</option>
+            </select>
+
+            <label for="diet_timings">Diet Timings:</label>
+            <select id="diet_timings" name="diet_timings" required>
+                <option value="" disabled selected>Select your diet timings</option>
+                <option value="morning_night">Morning, Night</option>
+                <option value="morning">Morning</option>
+                <option value="night">Night</option>
+            </select>
+
+            <label for="food_preference">Food Preference:</label>
+            <select id="food_preference" name="food_preference" required>
+                <option value="" disabled selected>Select your food preference</option>
+                <option value="veg">Veg</option>
+                <option value="non_veg">Non-Veg</option>
+            </select>
+
+
+
+            <button type="button" class="btn" onclick="generateResult()">Submit</button>
+        </form>
+    </div>
+
+    <script src="w.js"></script>
+</body>
+</html>

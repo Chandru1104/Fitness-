@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Result</title>
+    <link rel="stylesheet" href="w.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Gain Plan Result</h1>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                fitness_level: params.get('fitness_level'),
+                diet_timings: params.get('diet_timings'),
+                food_preference: params.get('food_preference'),
+                age_preference: params.get('age_preference')
+            };
+        }
+
+        function displayResult() {
+            const { fitness_level, diet_timings, food_preference, age_preference } = getQueryParams();
+            console.log(age_preference);
+            let exercisePlan = '';
+            let foodPlan = '';
+
+
+            // Exercise plan logic
+            if (diet_timings === 'morning_night' && fitness_level === 'sixpack' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>45-60 minutes</td></tr>
+                            <tr><td>Pushups</td><td>3 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>3 sets</td></tr>
+			    <tr><td>Splint running</td><td>3 sets(100 mts)</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+			    <tr><td>Walking</td><td>5 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning' && fitness_level === 'sixpack' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>45-60 minutes</td></tr>
+                            <tr><td>Pushups</td><td>3 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>3 sets</td></tr>
+			    <tr><td>Splint running</td><td>3 sets(100 mts)</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'night' && fitness_level === 'sixpack' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+			    <tr><td>Walking</td><td>5 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'morning_night' && fitness_level === 'normal_body_fit' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>45-60 minutes</td></tr>
+                            <tr><td>Pushups</td><td>3 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>3 sets</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning' && fitness_level === 'normal_body_fit' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>45-60 minutes</td></tr>
+                            <tr><td>Pushups</td><td>3 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>3 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'night' && fitness_level === 'normal_body_fit' && age_preference === 'below_25') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning_night' && fitness_level === 'sixpack' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning' && fitness_level === 'sixpack' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>3 sets</td></tr>
+                            <tr><td>Running</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'night' && fitness_level === 'sixpack' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>20-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning_night' && fitness_level === 'normal_body_fit' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>1 set</td></tr>
+                            <tr><td>Running</td><td>10-15 minutes</td></tr>
+                            <tr><td>Pushups</td><td>1 set</td></tr>
+                            <tr><td>Sit Ups</td><td>1 set</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>10-15 minutes</td></tr>
+                            <tr><td>Pushups</td><td>1 set</td></tr>
+                            <tr><td>Sit Ups</td><td>1 set</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 set</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'morning' && fitness_level === 'normal_body_fit' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>1 set</td></tr>
+                            <tr><td>Running</td><td>10-15 minutes</td></tr>
+                            <tr><td>Pushups</td><td>1 set</td></tr>
+                            <tr><td>Sit Ups</td><td>1 set</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (diet_timings === 'night' && fitness_level === 'normal_body_fit' && age_preference === '25_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Cycling</td><td>10-15 minutes</td></tr>
+                            <tr><td>Pushups</td><td>1 set</td></tr>
+                            <tr><td>Sit Ups</td><td>1 set</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 set</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'morning_night' && fitness_level === 'sixpack' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>2 sets</td></tr>
+                            <tr><td>Running</td><td>15-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Pushups</td><td>1 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 sets</td></tr>
+			    <tr><td>Walking</td><td>3 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'morning' && fitness_level === 'sixpack' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>2 sets</td></tr>
+                            <tr><td>Running</td><td>15-30 minutes</td></tr>
+                            <tr><td>Pushups</td><td>2 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>2 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'night' && fitness_level === 'sixpack' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Pushups</td><td>1 sets</td></tr>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 sets</td></tr>
+			    <tr><td>Walking</td><td>3 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'morning_night' && fitness_level === 'normal_body_fit' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>1 sets</td></tr>
+                            <tr><td>Running</td><td>15-30 minutes</td></tr>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                        </tbody>
+                    </table>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 sets</td></tr>
+			            <tr><td>Walking</td><td>2 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'morning' && fitness_level === 'normal_body_fit' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Morning:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Jump Ropes</td><td>1 sets</td></tr>
+                            <tr><td>Running</td><td>15-30 minutes</td></tr>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }else if (diet_timings === 'night' && fitness_level === 'normal_body_fit' && age_preference === 'above_40') {
+                exercisePlan = `
+                    <h2>Exercise Plan:</h2>
+                    <h2>Night:</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Exercise</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sit Ups</td><td>1 sets</td></tr>
+                            <tr><td>Jumping Jacks</td><td>1 sets</td></tr>
+			            <tr><td>Walking</td><td>2 kms</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }
+
+            // Food plan logic
+            if (food_preference === 'veg') {
+                foodPlan = `
+                    <h2>Food Plan:</h2>
+                    <h2>Veg</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Time</th><th>Food</th><th>Quantity</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>8:00 AM</td><td>medium size apple</td><td>1</td></tr>
+                            <tr><td>10:30 AM</td><td>Sliced muskmelon </td><td>1/2 bowl</td></tr>
+                            <tr><td>12:30 PM</td><td>Watermelon</td><td>1 bowl</td></tr>
+                            <tr><td>4:00 PM</td><td>big Mosambi or Orange</td><td>1</td></tr>
+                            <tr><td>6:30 PM</td><td>Pomegranate salad </td><td>1 cup</td></tr>
+                            <tr><td>8:30 PM</td><td>watermelon juice</td><td>1/2 cup</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            } else if (food_preference === 'non_veg') {
+                foodPlan = `
+                    <h2>Food Plan:</h2>
+                    <h2>Non Veg</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Time</th><th>Food</th><th>Quantity</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>7:00 AM</td><td>Egg</td><td>1</td></tr>
+                            <tr><td>8:00 AM</td><td>medium size apple</td><td>1</td></tr>
+                            <tr><td>10:30 AM</td><td>Sliced muskmelon </td><td>1/2 bowl</td></tr>
+                            <tr><td>12:30 PM</td><td>Watermelon</td><td>1 bowl</td></tr>
+                            <tr><td>4:00 PM</td><td>big Mosambi or Orange</td><td>1</td></tr>
+                            <tr><td>5:00 AM</td><td>Egg</td><td>1</td></tr>
+                            <tr><td>6:30 PM</td><td>Pomegranate salad </td><td>1 cup</td></tr>
+                            <tr><td>8:30 PM</td><td>watermelon juice</td><td>1/2 cup</td></tr>
+                            <tr><td>Weekly</td><td>Chicken</td><td>Twice</td></tr>
+                        </tbody>
+                    </table>
+                `;
+            }
+
+            // Display the results
+            document.getElementById('result').innerHTML = `
+                ${exercisePlan}
+                ${foodPlan}
+            `;
+        }
+
+        displayResult();
+    </script>
+</body>
+</html>

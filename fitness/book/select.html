@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Goal Selection</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Fitness Goal</h1>
+        <form id="goalForm">
+            <label for="goal">Choose your goal:</label>
+            <select id="goal" name="goal">
+                <option value="weight_loss">Weight Loss</option>
+                <option value="weight_gain">Weight Gain</option>
+            </select>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('goalForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const goal = document.getElementById('goal').value;
+            if (goal === 'weight_loss') {
+                window.location.href = 'weight_loss.html';
+            } else if (goal === 'weight_gain') {
+                window.location.href = 'weight_gain.html';
+            }
+        });
+    </script>
+</body>
+</html>

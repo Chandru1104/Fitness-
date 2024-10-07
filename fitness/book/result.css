@@ -1,0 +1,102 @@
+/* General Reset and Full-Height Setup */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('signin.avif'); /* Background image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+/* Form Header */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Form Label Styling */
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Form Select Styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+}
